@@ -12,12 +12,15 @@ switch (process.argv[2]){
     break;
   case "rooms":
     console.log("rooms");
-    db.rooms();
+    db.rooms(argument);
     break;
   case 'bookings':
     console.log("booking");
-    db.booking(argument, function(data){
-    });
+    db.bookings();
+    break;
+  case 'bookingsSelect':
+    console.log("Select a room");
+    db.bookingsSelect(argument);
     break;
   default:
     console.log("Enter input");

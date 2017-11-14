@@ -23,6 +23,15 @@ DROP DATABASE IF EXISTS hotels_db;
               check_out DATE
            );
 
+           CREATE VIEW available AS
+            SELECT rooms.number, rooms.capacity,
+               CASE
+                   WHEN bookings.check_in <= CURRENT_DATE AND CURRENT_DATE <= bookings.check_out THEN FALSE
+                   ELSE TRUE
+               END
+            AS available FROM bookings JOIN rooms ON rooms.ID = bookings.rooms_ID;
+
+
 
  COPY rooms(id,number,capacity)
  FROM '/Users/obo/Desktop/phase-3-Challenge-C/Assets/rooms.csv' DELIMITER ',' CSV HEADER;
