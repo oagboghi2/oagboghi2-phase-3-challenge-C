@@ -15,7 +15,9 @@
     "mocha": "^4.0.1"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "db:create": "psql -f schema.sql",
+    "db:seed":"psql -f load-data.sql"
   },
   "author": "",
   "license": "ISC"
