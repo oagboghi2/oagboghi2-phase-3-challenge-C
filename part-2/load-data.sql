@@ -1,3 +1,5 @@
+/c
+
 COPY rooms(id,number,capacity)
 FROM '/Users/obo/Desktop/phase-3-Challenge-C/Assets/rooms.csv' DELIMITER ',' CSV HEADER;
 

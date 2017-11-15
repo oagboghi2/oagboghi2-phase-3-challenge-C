@@ -15,7 +15,7 @@
     "mocha": "^4.0.1"
   },
   "scripts": {
-    "test": "mocha",
+    "test": "mocha database_tests.js",
     "db:create": "psql -f schema.sql",
     "db:seed":"psql -f load-data.sql"
   },
