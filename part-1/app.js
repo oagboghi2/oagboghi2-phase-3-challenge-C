@@ -8,7 +8,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false }));
 
 //routes
-const mainRoutes = require('./routes/routes.js');
+const mainRoutes = require('./routes.js');
 app.use(mainRoutes);
 
 app.get('/', function(req, res, next){
